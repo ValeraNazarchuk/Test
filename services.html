@@ -14,35 +14,37 @@
       <div class="container">
         <div class="header__inner">
           <a class="header__link" href="./main.html">
+            <picture class="header__logo">
+            <source srcset="./images/logo-mobile.png" media="(max-width: 550px)">
             <img src="./images/logo.png" alt="logo">
+          </picture>
           </a>
 
           <nav class="nav">
-            <a class="nav__burger">
-              <span class="nav__burger-line"></span>
-            </a>
+
             <ul class="nav__list">
               <li class="nav__list-item">
-                <a class="nav__item-link" href="./main.html">Main</a>
-              </li>
-              <li class="nav__list-item">
-                <a class="nav__item-link" href="#">Support</a>
+                <a class="nav__item-link" href="./services.html">Services</a>
               </li>
               <li class="nav__list-item">
                 <a class="nav__item-link" href="./invoices.html">Invoices</a>
               </li>
               <li class="nav__list-item">
-                <a class="nav__item-link" href="№">FAQ</a>
+                <a class="nav__item-link" href="./tickets.html">Tickets</a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__item-link" href="./faq.html">FAQ</a>
               </li>
             </ul>
           </nav>
 
           <div class="header__box">
-            <a class="header__box-user" href="#">
+            <a class="header__box-link" href="./my-account.html">
               <img class="header__box-img" src="./images/user.svg" alt="user">
             </a>
-            <p class="header__box-text">Hello, John John</p>
-            <a class="header__box-link" href="#">Log Out</a>
+            <a class="header__box-link" href="#">
+              <img class="header__box-img" src="./images/telegram.svg" alt="user">
+            </a>
           </div>
 
           <a class="burger">
@@ -57,93 +59,89 @@
       <div class="container">
         <div class="main__inner">
           <aside class="aside">
-              <div class="mobile__box">
-                <a class="mobile__box-user" href="#">
-                  <img class="mobile__box-img" src="./images/user.svg" alt="user">
-                </a>
-                <p class="mobile__box-text">Hello, John John</p>
-              </div>
-              <div class="aside__box">
-                <div class="aside__box-top">
-                  <img class="aside__top-img" src="./images/important.svg" alt="icon">
-                  <h6 class="aside__top-title">Important</h6>
-                  <p class="aside__top-number">3</p>
+            <div class="aside-info">
+              <div class="aside-info__box">
+                <div class="aside-info__box-top">
+                  <img class="aside-info__top-img" src="./images/important.svg" alt="icon">
+                  <h6 class="aside-info__top-title">Important</h6>
+                  <p class="aside-info__top-number">2</p>
                 </div>
-                <ul class="aside__box-list">
-                  <li class="aside__box-item">
-                    <p class="aside__box-text">You have earned totay:</p>
-                    <p class="aside__box-money">$124.30</p>
+                <ul class="aside-info__box-list">
+                  <li class="aside-info__box-item">
+                    <p class="aside-info__box-text">Your current service:</p>
+                    <p class="aside-info__box-money">Gold</p>
                   </li>
-                  <li class="aside__box-item">
-                    <p class="aside__box-text">New servises this month:</p>
-                    <p class="aside__box-money">2</p>
+                  <li class="aside-info__box-item">
+                    <p class="aside-info__box-text">New servises this month:</p>
+                    <p class="aside-info__box-money">2</p>
                   </li>
-                  <li class="aside__box-item">
-                    <p class="aside__box-text">Actual discounts:</p>
-                    <p class="aside__box-money">10%</p>
+                  <li class="aside-info__box-item">
+                    <p class="aside-info__box-text">Actual discounts:</p>
+                    <p class="aside-info__box-money">10%</p>
                   </li>
                 </ul>
               </div>
 
-              <div class="aside__accordion">
-                <div id="aside__accordion-top" class="aside__accordion-top">
-                  <img class="aside__top-img" src="./images/services.svg" alt="icon">
-                  <h6 class="aside__top-title">Your servises</h6>
-                  <img class="aside__top-arrow" src="./images/chevron-down.svg" alt="icon">
+              <!-- <div class="aside-info__accordion">
+                <div id="aside-info__accordion-top" class="aside-info__accordion-top">
+                  <img class="aside-info__top-img" src="./images/services.svg" alt="icon">
+                  <h6 class="aside-info__top-title">Your servises</h6>
+                  <img class="aside-info__top-arrow" src="./images/chevron-down.svg" alt="icon">
                 </div>
 
-                <ul class="aside__accordion-list">
-                  <li class="aside__accordion-item">
-                    <a class="aside__accordion-link" href="#">Your servises 1</a>
+                <ul class="aside-info__accordion-list">
+                  <li class="aside-info__accordion-item">
+                    <a class="aside-info__accordion-link" href="#">Your servises 1</a>
                   </li>
-                  <li class="aside__accordion-item">
-                    <a class="aside__accordion-link" href="#">Your servises 1</a>
+                  <li class="aside-info__accordion-item">
+                    <a class="aside-info__accordion-link" href="#">Your servises 1</a>
+                  </li>
+                </ul>
+              </div> -->
+
+              <div class="aside-info__accordion">
+                <div id="aside-info__accordion-top" class="aside-info__accordion-top">
+                  <img class="aside-info__top-img" src="./images/credit-card.svg" alt="icon">
+                  <h6 class="aside-info__top-title">Payments</h6>
+                  <img class="aside-info__top-arrow" src="./images/chevron-down.svg" alt="icon">
+                </div>
+
+                <ul class="aside-info__accordion-list">
+                  <li class="aside-info__accordion-item">
+                    <a class="aside-info__accordion-link" href="#">Paypall</a>
+                  </li>
+                  <li class="aside-info__accordion-item">
+                    <a class="aside-info__accordion-link" href="#">Payoneer</a>
+                  </li>
+                  <li class="aside-info__accordion-item">
+                    <a class="aside-info__accordion-link" href="#">Fondy</a>
                   </li>
                 </ul>
               </div>
-
-              <div class="aside__accordion">
-                <div id="aside__accordion-top" class="aside__accordion-top">
-                  <img class="aside__top-img" src="./images/tickets.svg" alt="icon">
-                  <h6 class="aside__top-title">Tickets</h6>
-                  <img class="aside__top-arrow" src="./images/chevron-down.svg" alt="icon">
+              
+              <div class="aside-info__accordion">
+                <div id="aside-info__accordion-top" class="aside-info__accordion-top">
+                  <img class="aside-info__top-img" src="./images/tickets.svg" alt="icon">
+                  <h6 class="aside-info__top-title">Tickets</h6>
+                  <img class="aside-info__top-arrow" src="./images/chevron-down.svg" alt="icon">
                 </div>
 
-                <ul class="aside__accordion-list">
-                  <li class="aside__accordion-item">
-                    <a class="aside__accordion-link" href="#">
-                      <p class="aside__accordion-text">Ongoing</p>
-                      <p class="aside__accordion-number font--green">2</p>
+                <ul class="aside-info__accordion-list">
+                  <li class="aside-info__accordion-item">
+                    <a class="aside-info__accordion-link" href="#">
+                      <p class="aside-info__accordion-text">Ongoing</p>
+                      <p class="aside-info__accordion-number font--green">2</p>
                     </a>
                   </li>
-                  <li class="aside__accordion-item">
-                    <a class="aside__accordion-link" href="#">
-                      <p class="aside__accordion-text">Overdue</p>
-                      <p class="aside__accordion-number font--red">8</p>
+                  <li class="aside-info__accordion-item">
+                    <a class="aside-info__accordion-link" href="#">
+                      <p class="aside-info__accordion-text">Overdue</p>
+                      <p class="aside-info__accordion-number font--red">8</p>
                     </a>
                   </li>
                 </ul>
               </div>
-
-              <div class="aside__accordion">
-                <div id="aside__accordion-top" class="aside__accordion-top">
-                  <img class="aside__top-img" src="./images/credit-card.svg" alt="icon">
-                  <h6 class="aside__top-title">Payments</h6>
-                  <img class="aside__top-arrow" src="./images/chevron-down.svg" alt="icon">
-                </div>
-
-                <ul class="aside__accordion-list">
-                  <li class="aside__accordion-item">
-                    <a class="aside__accordion-link" href="#">Payments</a>
-                  </li>
-                  <li class="aside__accordion-item">
-                    <a class="aside__accordion-link" href="#">Payoneer</a>
-                  </li>
-                  <li class="aside__accordion-item">
-                    <a class="aside__accordion-link" href="#">Fondy</a>
-                  </li>
-                </ul>
-              </div>
+            </div>
           </aside>
 
           <section class="content">
@@ -151,17 +149,6 @@
               <div class="content__top">
                 <div class="content__top-body">
                   <h1 class="title content__top-title">Services</h1>
-                  <div id="content__top-box" class="content__top-box">
-                    <p class="content__top-text">Showing</p>
-                    <p id="content__top-number" class="content__top-number">10</p>
-                    <img src="./images/invoices/arrow-drop-down.svg" alt="icon">
-                    <p class="content__top-numbers">of 35</p>
-                    <ul id="content__top-list" class="content__top-list">
-                      <li class="content__top-item">10</li>
-                      <li class="content__top-item">35</li>
-                      <li class="content__top-item">All</li>
-                    </ul>
-                  </div>
                 </div>
                 <div class="content__top-search">
                   <img class="content__top-img" src="./images/main/Search.svg" alt="Search">
@@ -180,7 +167,7 @@
                   <p class="content__list-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                   <div class="content__list-box">
                     <p class="content__list-price">$100</p>
-                    <a class="content__list-link" href="#">Order</a>
+                    <a class="content__list-link" href="./about-service.html">Order</a>
                   </div>
                 </li>
 
@@ -194,7 +181,7 @@
                   <p class="content__list-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                   <div class="content__list-box">
                     <p class="content__list-price">$200</p>
-                    <a class="content__list-link" href="#">Order</a>
+                    <a class="content__list-link" href="./about-service.html">Order</a>
                   </div>
                 </li>
 
@@ -208,7 +195,7 @@
                   <p class="content__list-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                   <div class="content__list-box">
                     <p class="content__list-price">$300</p>
-                    <a class="content__list-link" href="#">Order</a>
+                    <a class="content__list-link" href="./about-service.html">Order</a>
                   </div>
                 </li>
               </ul>
