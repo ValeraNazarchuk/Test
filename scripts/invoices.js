@@ -1,7 +1,21 @@
 'use strict'
 
+// _____Event click on the header icon___
+
+const headerIcon = document.querySelectorAll('.header__box-icon')[0]
+const headerLinks = document.querySelector('.header__box-links')
+
+headerIcon.addEventListener('click', (e) => {
+  e.preventDefault()
+  headerLinks.classList.toggle('header__box--active')
+})
+
+//______ACCORDION______
+
 const accordionInfoBtn = document.querySelectorAll('#aside-info__accordion-top')
-const accordionInfoList = document.querySelectorAll('.aside-info__accordion-list')
+const accordionInfoList = document.querySelectorAll(
+  '.aside-info__accordion-list'
+)
 const accordionInfoArrow = document.querySelectorAll('.aside-info__top-arrow')
 
 accordionInfoBtn.forEach((button, index) => {
@@ -12,9 +26,15 @@ accordionInfoBtn.forEach((button, index) => {
   })
 })
 
-const accordionFilterBtn = document.querySelectorAll('#aside-filter__accordion-top')
-const accordionFilterList = document.querySelectorAll('.aside-filter__accordion-list')
-const accordionFilterArrow = document.querySelectorAll('.aside-filter__top-arrow')
+const accordionFilterBtn = document.querySelectorAll(
+  '#aside-filter__accordion-top'
+)
+const accordionFilterList = document.querySelectorAll(
+  '.aside-filter__accordion-list'
+)
+const accordionFilterArrow = document.querySelectorAll(
+  '.aside-filter__top-arrow'
+)
 
 accordionFilterBtn.forEach((button, index) => {
   button.addEventListener('click', (e) => {
@@ -42,64 +62,13 @@ contentTopItem.forEach((item) => {
   })
 })
 
-// ______CREATE TICKET_____
-const cteareBtn = document.querySelector('#content__create-btn')
-const contentForm = document.querySelector('#content__form')
-
-cteareBtn.addEventListener('click', () => {
-  contentForm.classList.toggle('content__form--active')
-})
-
-//_________________POPUP *NEW TAG*_________________
-
-const btnNewTag = document.querySelector('#form__new-tag')
-
-const popup = document.querySelector('.popup')
-const popupClose = document.querySelector('.popup__close')
-const popupInput = document.querySelector('#popup__input')
-
-// ----------OPEN POPUP----------
-btnNewTag.addEventListener('click', (e) => {
-  // if (navList.classList.contains('header__menu--active')) menu()
-  popup.classList.add('show')
-  document.body.style.cssText = `overflow: hidden;`
-})
-
-// adding # to the beginning of input
-popupInput.addEventListener('click', () => {
-  popupInput.value = '#'
-})
-
-// close on click on overlay
-popupClose.addEventListener('click', (e) => {
-  popup.classList.remove('show')
-  document.body.style.cssText = ''
-})
-
-// close on click on overlay
-popup.addEventListener('click', (e) => {
-  if (e.target === popup) {
-    popup.classList.remove('show')
-    document.body.style.cssText = ''
-  }
-})
-
-// close on press of escape button
-document.addEventListener('keydown', (e) => {
-  if (e.code === 'Escape' && popup.classList.contains('show')) {
-    popup.classList.remove('show')
-    document.body.style.cssText = ''
-  }
-})
-
-//__________BURGER AND FILTER__________
+//________BURGER_____
 
 const asideInfo = document.querySelector('.aside-info')
 const burger = document.querySelector('.burger')
 const asidefilter = document.querySelector('.aside-filter')
 const filterBtn = document.querySelector('.content__filter-btn')
 
-//____BURGER___
 burger.addEventListener('click', menu)
 
 function menu() {
@@ -112,8 +81,11 @@ function menu() {
 
   burger.classList.toggle('burger--active')
   asideInfo.classList.toggle('aside-info--active')
-  
-  if(document.body.classList.contains('body--active') && !burger.classList.contains('burger--active')) {
+
+  if (
+    document.body.classList.contains('body--active') &&
+    !burger.classList.contains('burger--active')
+  ) {
     document.body.classList.remove('body--active')
   } else {
     document.body.classList.add('body--active')
@@ -135,8 +107,7 @@ function filters() {
   }
 }
 
-
-//__________Mobile content arrow_____
+//_______Mobile content arrow_____
 
 const contentBox = document.querySelectorAll('.content__body-box')
 const contentBtn = document.querySelectorAll('.content__body-btn')
