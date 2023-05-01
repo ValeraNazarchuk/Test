@@ -39,44 +39,50 @@ accordionInfoBtn.forEach((button, index) => {
   })
 })
 
-//__________BURGER__________
+const accordionFilterBtn = document.querySelectorAll(
+  '#aside-filter__accordion-top'
+)
+const accordionFilterList = document.querySelectorAll(
+  '.aside-filter__accordion-list'
+)
+const accordionFilterArrow = document.querySelectorAll(
+  '.aside-filter__top-arrow'
+)
+
+accordionFilterBtn.forEach((button, index) => {
+  button.addEventListener('click', (e) => {
+    accordionFilterBtn[index].classList.toggle('accordion__top--active')
+    accordionFilterList[index].classList.toggle('accordion__list--active')
+    accordionFilterArrow[index].classList.toggle('accordion__arrow--active')
+  })
+})
+
+//________BURGER_____
 
 const asideInfo = document.querySelector('.aside-info')
 const burger = document.querySelector('.burger')
+const asidefilter = document.querySelector('.aside-filter')
+const filterBtn = document.querySelector('.content__filter-btn')
 
-//____BURGER___
 burger.addEventListener('click', menu)
 
 function menu() {
+  if (burger.classList.contains('burger-filter--active')) {
+    burger.classList.remove('burger-filter--active')
+    asidefilter.classList.remove('aside-filter--active')
+    document.body.classList.remove('body--active')
+    return
+  }
 
   burger.classList.toggle('burger--active')
   asideInfo.classList.toggle('aside-info--active')
-  
-  if(document.body.classList.contains('body--active') && !burger.classList.contains('burger--active')) {
+
+  if (
+    document.body.classList.contains('body--active') &&
+    !burger.classList.contains('burger--active')
+  ) {
     document.body.classList.remove('body--active')
   } else {
     document.body.classList.add('body--active')
   }
 }
-
-const accordiontitle = document.querySelectorAll('.content__item-title')
-const accordionBox = document.querySelectorAll('.content__item-box')
-
-accordiontitle.forEach((button, index) => {
-  button.addEventListener('click', () => {
-
-    if (button.classList.contains('content__title--active')){
-      accordionBox[index].classList.remove('content__item--active')
-      accordiontitle[index].classList.remove('content__title--active')
-      return
-    }
-
-    for(let i = 0; i < accordionBox.length; i++) {
-      accordionBox[i].classList.remove('content__item--active')
-      accordiontitle[i].classList.remove('content__title--active')
-    }
-
-    accordionBox[index].classList.add('content__item--active')
-    accordiontitle[index].classList.add('content__title--active')
-  })
-} )
